@@ -1,0 +1,162 @@
+/* ----------------------- */
+/* 1.Base Rules            */
+/* a.Variables             */
+/* b.Reset Default         */
+/* c.Screens Breakpoints   */
+/* ----------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  /* font weights */
+  --extraBold: 900;
+  --bold: 800;
+  --semiBold: 700;
+  --medium: 600;
+  --regular: 500;
+  --light: 400;
+
+  /* breakpoints display */
+  --small: 576px;
+  --medium: 768px;
+  --large: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
+
+  /* font family */
+  --jakarta-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-end: 0;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: var(--regular);
+  text-wrap: wrap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Root core scroll behaviour */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Am elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+textarea,
+select,
+figcaption,
+button {
+  font: inherit;
+}
+
+button {
+  font-family: var(--jakarta-sans);
+  cursor: pointer;
+  background: none;
+  background-color: none;
+  border: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background-color 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header {
+  flex-wrap: wrap;
+  padding-left: 1.937rem !important;
+  padding-right: 1.937rem !important;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+/* breakpoint display classes */
+.small {
+  width: var(--small);
+}
+
+.medium {
+  width: var(--medium);
+}
+
+.large {
+  width: var(--large);
+}
+
+.xl {
+  width: var(--xl);
+}
+
+.xxl {
+  width: var(--xxl);
+}
+
+/* ----------------------- */
+/* 2.Layout Rules          */
+/* ----------------------- */
+
+
+#home,
+#ourpackage,
+#callus {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
