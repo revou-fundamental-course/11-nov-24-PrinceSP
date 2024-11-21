@@ -7,87 +7,109 @@
   <title>Travel Agency</title>
 </head>
 
-<body>
-  <header>
-    <img />
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#ourpackage">Our Package</a></li>
-        <li><a href="#callus">Call Us</a></li>
+<body class="column alg-center">
+  <header class="flex alg-center jty-between w-100 pv-1">
+    <h5 class="italic">mockups</h5>
+    <nav class="flex">
+      <ul role="list" class="menu">
+        <li class="fs-7"><a href="#home">Home</a></li>
+        <li class="fs-7"><a href="#ourpackage">Our Package</a></li>
+        <li class="fs-7"><a href="#callus">Call Us</a></li>
       </ul>
     </nav>
   </header>
-  <h1>Your Trusted Travel Agent's</h1>
-  <h5>Your happiness is our happiness</h5>
-  <main>
-    <section>
-      <img src="" alt="">
-      <span>"Liburanku jadi menyenangkan bersama Travel Agentku"</span>
-      <article>
-        <img src="" alt="">
-        <p>Florence Hughes</p>
-        <span>Ibu Rumah Tangga, 28</span>
+  <h3 class="title">Your Trusted Travel Agent's</h3>
+  <h5 class="desc mv-5">Your happiness is our happiness</h5>
+  <main id="home" class="container alg-center jty-between w-100">
+    <section class="w-50 column alg-center jty-between">
+      <img
+        src="https://images.pexels.com/photos/29288524/pexels-photo-29288524/free-photo-of-black-and-white-portrait-on-antibes-rocks.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        alt="Lady on the rock">
+      <span class="fs-6 quote italic">"Liburanku jadi menyenangkan bersama Travel Agentku"</span>
+      <article class="userFeedback w-75 row alg-center mv-5">
+        <img src="https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg"
+          alt="Profile picture">
+        <div>
+          <p class="fs-6 bold">Florence Hughes</p>
+          <span class="fs-1 italic status">Ibu Rumah Tangga, 28</span>
+        </div>
       </article>
     </section>
-    <aside>
+    <aside class="w-50 column rounded p-4 alg-center">
       <h6>Contact</h6>
       <p>Our sales will contact you 24 hours after we receive your data</p>
-      <form action="#">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name">
-        <label for="name">Email Address</label>
-        <input type="text" id="name" name="name">
-        <label for="interest">What are you interested in?</label>
-        <select name="interest" id="interest">
-          <option value="">Select Option</option>
-          <option value="carRent">Car Rent</option>
-          <option value="tourGuide">Tour Guide</option>
-          <option value="amenitiesInfo">Amenities Info</option>
-          <option value="payment">Payment</option>
-        </select>
-        <button type="submit" name="button">send</button>
+      <form action="#" class="column w-75">
+        <div class="column">
+          <label class="label medium" for="name">Your Name:</label>
+          <input placeholder="First and last name" class="input-control" type="text" id="name" name="name">
+        </div>
+        <div class="column">
+          <label class="label medium" for="name">Email Address:</label>
+          <input placeholder="johndoe@gmail.com" class="input-control" type="text" id="name" name="name">
+        </div>
+        <div class="column">
+          <label class="label medium" for="interest">What are you interested in?</label>
+          <select name="interest" id="interest">
+            <option value="">Select Option</option>
+            <option value="carRent">Car Rent</option>
+            <option value="tourGuide">Tour Guide</option>
+            <option value="amenitiesInfo">Amenities Info</option>
+            <option value="payment">Payment</option>
+          </select>
+        </div>
+        <button type="submit" name="button" class="btn mv-5 p-3 w-100">send</button>
       </form>
     </aside>
   </main>
 
-  <section>
-    <h1>Our Package</h1>
-    <div>
-      <article>
+  <section class="container column">
+    <h3 class="title mv-4">Our Package</h3>
+    <div class="flex alg-center jty-between w-100">
+      <article class="w-25">
         <img src="" alt="">
-        <h3>Bali</h3>
-        <p>Discover paradise: Sun, sand, and spirituality</p>
+        <h5 class="title">Bali</h5>
+        <p class="desc">Discover paradise: Sun, sand, and spirituality</p>
       </article>
-      <article>
+      <article class="w-25">
         <img src="" alt="">
-        <h3>Japan</h3>
-        <p>Explore Japan: Ancient Traditions, Modern Marvels</p>
+        <h5 class="title">Japan</h5>
+        <p class="desc">Explore Japan: Ancient Traditions, Modern Marvels</p>
       </article>
-      <article>
+      <article class="w-25">
         <img src="" alt="">
-        <h3>Singapore</h3>
-        <p>Experience Singapore: A Lion City Adventure</p>
+        <h5 class="title">Singapore</h5>
+        <p class="desc">Experience Singapore: A Lion City Adventure</p>
       </article>
     </div>
-    <div>
-      <article>
+    <div class="flex alg-center jty-between w-100">
+      <article class="w-25">
         <img src="" alt="">
-        <h3>Bandung</h3>
-        <p>Bandung Getaway: Cool Climate, Warm Hospitality</p>
+        <h5 class="title">Bandung</h5>
+        <p class="desc">Bandung Getaway: Cool Climate, Warm Hospitality</p>
       </article>
-      <article>
+      <article class="w-25">
         <img src="" alt="">
-        <h3>Surabaya</h3>
-        <p>Surabaya Adventure: Historic Charm, Modern City</p>
+        <h5 class="title">Surabaya</h5>
+        <p class="desc">Surabaya Adventure: Historic Charm, Modern City</p>
       </article>
-      <article>
+      <article class="w-25">
         <img src="" alt="">
-        <h3>Bangkok</h3>
-        <p>Bangkok Experience: A City of Contrasts</p>
+        <h5 class="title">Bangkok</h5>
+        <p class="desc">Bangkok Experience: A City of Contrasts</p>
       </article>
     </div>
   </section>
+
+  <section class="container column mv-5">
+    <h3 class="title mv-4">Your Closing Argument Headline</h3>
+    <p class="w-50 tagline">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id fuga libero nostrum qui nihil
+      sit illo eum delectus nobis eveniet! Ducimus obcaecati dolor vitae.</p>
+    <button></button>
+  </section>
+
+  <footer>
+
+  </footer>
 </body>
 
 </html>

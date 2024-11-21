@@ -1,0 +1,702 @@
+/* ----------------------- */
+/* 1.Base Rules            */
+/* a.Variables             */
+/* b.Reset Default         */
+/* c.Screens Breakpoints   */
+/* ----------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  /* font weights */
+  --extraBold: 900;
+  --bold: 800;
+  --semiBold: 700;
+  --medium: 600;
+  --regular: 500;
+  --light: 400;
+
+  /* breakpoints display */
+  --small: 576px;
+  --mediumScreen: 768px;
+  --large: 992px;
+  --xl: 1200px;
+  --xxl: 1400px;
+
+  /* font-sizes */
+  /* 64px */
+  --fs-1: 4rem;
+  /* 48px */
+  --fs-2: 3rem;
+  /* 40px */
+  --fs-3: 2.5rem;
+  /* 36px */
+  --fs-4: 2.25rem;
+  /* 24px */
+  --fs-5: 1.5rem;
+  /* 20px */
+  --fs-6: 1.25rem;
+  /* 16px */
+  --fs-7: 1rem;
+  /* 10px */
+  --fs-8: 0.625rem;
+
+  /* font family */
+  --jakarta-sans: "Plus Jakarta Sans", sans-serif;
+
+  /* gaps */
+  --gap: 4vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block-end: 0;
+}
+
+/* Set default font size */
+h1 {
+  font-size: var(--fs-1);
+}
+
+h2 {
+  font-size: var(--fs-2);
+}
+
+h3 {
+  font-size: var(--fs-3);
+}
+
+h4 {
+  font-size: var(--fs-4);
+}
+
+h5 {
+  font-size: var(--fs-5);
+}
+
+h6 {
+  font-size: var(--fs-6);
+}
+
+p {
+  font-size: 1rem;
+  font-weight: var(--regular);
+  text-wrap: wrap;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Root core scroll behaviour */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: var(--jakarta-sans);
+}
+
+/* Am elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+textarea,
+select,
+figcaption,
+button {
+  font: inherit;
+}
+
+button {
+  font-family: var(--jakarta-sans);
+  cursor: pointer;
+  background: none;
+  background-color: none;
+  border: none;
+  margin: 0;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background-color 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+header {
+  flex-wrap: wrap;
+  padding-left: 1.937rem !important;
+  padding-right: 1.937rem !important;
+  border-bottom-width: 1px;
+  border-bottom-color: #e5e9ef;
+  border-bottom-style: solid;
+  margin-bottom: 80px;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+/* breakpoint display classes */
+.small {
+  width: var(--small);
+}
+
+.mediumScreen {
+  width: var(--medium);
+}
+
+.large {
+  width: var(--large);
+}
+
+.xl {
+  width: var(--xl);
+}
+
+.xxl {
+  width: var(--xxl);
+}
+
+/* ----------------------- */
+/* 2.Layout Rules          */
+/* ----------------------- */
+
+
+#home,
+#ourpackage,
+#callus {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 1.937rem !important;
+  padding-right: 1.937rem !important;
+}
+
+#home>* {
+  height: 70%;
+}
+
+.flex {
+  display: flex;
+}
+
+.alg-center {
+  align-items: center;
+}
+
+.alg-start {
+  align-items: start;
+}
+
+.alg-end {
+  align-items: end;
+}
+
+.jty-center {
+  justify-content: center;
+}
+
+.jty-between {
+  justify-content: space-between;
+}
+
+.jty-around {
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.jty-evenly {
+  justify-content: space-evenly;
+}
+
+.jty-right {
+  justify-content: right;
+}
+
+.absolute-center {
+  left: 0;
+  right: 0;
+  bottom: -56px;
+  margin: 0 auto;
+}
+
+.absolute-right {
+  right: 40px;
+  bottom: -90px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.grid {
+  display: grid;
+}
+
+.d-block {
+  display: block;
+}
+
+/* Layout display classes - end */
+
+/* For screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  /* added line */
+  border: 0;
+}
+
+/* ----------------------- */
+/* 3.Module Rules          */
+/* a.Utilities class       */
+/* b.Component             */
+/* ----------------------- */
+
+/* a.Utilities class */
+.box {
+  padding: 12px 15px;
+}
+
+.container {
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  flex-direction: row;
+  gap: var(--gap);
+  padding-left: 1.937rem !important;
+  padding-right: 1.937rem !important;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  margin-right: 3rem;
+  font-family: var(--ff-karla);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.rounded {
+  border-radius: 20px;
+}
+
+.w-25 {
+  width: 25% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-75 {
+  width: 75% !important;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+/* For desktop: */
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media (max-width: var(--mediumScreen)) {
+
+  /* Adjust the max-width value for mobile as needed */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+.p-1 {
+  padding: 0.875rem;
+}
+
+.p-2 {
+  padding: 1rem;
+}
+
+.p-3 {
+  padding: 1.5rem;
+}
+
+.p-4 {
+  padding: 2rem;
+}
+
+/* margin vertical */
+.mv-1 {
+  margin: 1.875rem 0;
+}
+
+.mv-2 {
+  margin: 2rem 0;
+}
+
+.mv-3 {
+  margin: 2.25rem 0;
+}
+
+.mv-4 {
+  margin: 3rem 0;
+}
+
+.mv-5 {
+  margin: 3.75rem 0;
+}
+
+/* margin horizontal */
+.mh-1 {
+  margin: 0 1rem;
+}
+
+/* margin top */
+.mt-0 {
+  margin-top: 0 !important;
+}
+
+/*24px*/
+.pv-1 {
+  padding: 1.5rem 0;
+}
+
+/*26px*/
+.pv-2 {
+  padding: 1.625rem 0;
+}
+
+/*30px*/
+.pv-3 {
+  padding: 1.875rem 0;
+}
+
+/*34px*/
+.pv-4 {
+  padding: 2.125rem 0;
+}
+
+/*36px*/
+.pv-5 {
+  padding: 2.25rem 0;
+}
+
+/* colors */
+.bg-primary {
+  background-color: var(--clr-primary);
+}
+
+.bg-secondary {
+  background-color: var(--clr-secondary);
+}
+
+.bg-dark {
+  background-color: var(--clr-dark);
+}
+
+.bg-light-accent {
+  background-color: var(--clr-light-accent);
+}
+
+.bg-white {
+  background-color: var(--clr-white);
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.text-secondary {
+  color: var(--clr-secondary);
+}
+
+.text-dark {
+  color: var(--clr-dark);
+}
+
+.text-dark-accent {
+  color: var(--clr-dark-accent);
+}
+
+.text-accent {
+  color: var(--clr-light);
+}
+
+.text-white {
+  color: var(--clr-white);
+}
+
+.text-grey {
+  color: #8b8b8b;
+}
+
+/*typography*/
+.ff-jakarta-sans {
+  font-family: var(--ff-jakarta-sans);
+}
+
+/* text transform classes */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+/* font size classes */
+.fs-1 {
+  font-size: var(--fs-1 !important);
+}
+
+.fs-2 {
+  font-size: var(--fs-2) !important;
+}
+
+.fs-3 {
+  font-size: var(--fs-3) !important;
+}
+
+.fs-4 {
+  font-size: var(--fs-4) !important;
+}
+
+.fs-5 {
+  font-size: var(--fs-5) !important;
+}
+
+.fs-6 {
+  font-size: var(--fs-6) !important;
+}
+
+.fs-7 {
+  font-size: var(--fs-7) !important;
+}
+
+.fs-8 {
+  font-size: var(--fs-8) !important;
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* font weight classes */
+.extrabold {
+  font-weight: var(--extraBold);
+}
+
+.bold {
+  font-weight: var(--bold);
+}
+
+.semibold {
+  font-weight: var(--semiBold);
+}
+
+.medium {
+  font-weight: var(--medium);
+}
+
+.regular {
+  font-weight: var(--regular);
+}
+
+.fw-light {
+  font-weight: var(--light);
+}
+
+.title {
+  color: #3B4754;
+}
+
+.desc {
+  color: #798DA3;
+}
+
+/* form */
+input,
+select {
+  border: 2px solid #c4cbd3;
+  border-radius: 10px;
+  padding: 15px 19px;
+  font-family: var(--jakarta-sans);
+  font-size: 1.125rem;
+  margin-bottom:40px;
+}
+
+.input-control::placeholder {
+  color: #a4aebb;
+}
+
+.label {
+  color: #343434;
+  font-family: var(--jakarta-sans);
+  font-size: var(--fs-7);
+}
+
+#home>aside,
+#ourpackage > div {
+  background-color: #EDF0F4;
+}
+
+#home>section>img {
+  width: 90%;
+  height: 70%;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.quote,
+.status,
+.tagline {
+  color: #788699;
+}
+
+.userFeedback>img {
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+  margin-right: 20px;
+}
+
+.tagline {
+  text-align: center;
+}
+
+.btn {
+  min-width: 100px;
+  width: 150px;
+  max-width: auto;
+  color: #fff;
+  font-weight: var(--bold);
+  letter-spacing: 2px;
+  background-color: #29323D;
+  border-radius: 12px;
+  text-transform: uppercase;
+}
