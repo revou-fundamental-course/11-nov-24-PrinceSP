@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
   <title>Travel Agency</title>
 </head>
@@ -18,20 +21,18 @@
       </ul>
     </nav>
   </header>
-  <h3 class="title">Your Trusted Travel Agent's</h3>
+  <h3 class="title bigTitles">Your Trusted Travel Agent's</h3>
   <h5 class="desc mv-5">Your happiness is our happiness</h5>
   <main id="home" class="container alg-center jty-between w-100">
     <section class="w-50 column alg-center jty-between">
-      <img
-        src="https://images.pexels.com/photos/29288524/pexels-photo-29288524/free-photo-of-black-and-white-portrait-on-antibes-rocks.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-        alt="Lady on the rock">
-      <span class="fs-6 quote italic">"Liburanku jadi menyenangkan bersama Travel Agentku"</span>
+      <img alt="Lady on the rock" id="bannerImage">
+      <span class="fs-6 quote italic" id="quotes"></span>
       <article class="userFeedback w-75 row alg-center mv-5">
         <img src="https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg"
           alt="Profile picture">
         <div>
           <p class="fs-6 bold">Florence Hughes</p>
-          <span class="fs-1 italic status">Ibu Rumah Tangga, 28</span>
+          <span class="fs-7 italic status">Ibu Rumah Tangga, 28</span>
         </div>
       </article>
     </section>
@@ -44,8 +45,8 @@
           <input placeholder="First and last name" class="input-control" type="text" id="name" name="name">
         </div>
         <div class="column">
-          <label class="label medium" for="name">Email Address:</label>
-          <input placeholder="johndoe@gmail.com" class="input-control" type="text" id="name" name="name">
+          <label class="label medium" for="email">Email Address:</label>
+          <input placeholder="johndoe@gmail.com" class="input-control" type="text" id="email" name="email">
         </div>
         <div class="column">
           <label class="label medium" for="interest">What are you interested in?</label>
@@ -62,54 +63,90 @@
     </aside>
   </main>
 
-  <section class="container column">
+  <section id="ourpackage" class="container column p-4">
     <h3 class="title mv-4">Our Package</h3>
-    <div class="flex alg-center jty-between w-100">
-      <article class="w-25">
-        <img src="" alt="">
-        <h5 class="title">Bali</h5>
-        <p class="desc">Discover paradise: Sun, sand, and spirituality</p>
+    <div class="flex alg-center jty-between w-100 mv-3">
+      <article class="flex alg-start w-25">
+        <span class="iconHolder alg-center jty-center">
+          <i class="fa-regular fa-lightbulb"></i>
+        </span>
+        <div class="alg-center">
+          <h5 class="title">Bali</h5>
+          <p class="desc">Discover paradise: Sun, sand, and spirituality</p>
+        </div>
       </article>
-      <article class="w-25">
-        <img src="" alt="">
-        <h5 class="title">Japan</h5>
-        <p class="desc">Explore Japan: Ancient Traditions, Modern Marvels</p>
+      <article class="flex alg-start w-25">
+        <span class="iconHolder alg-center jty-center">
+          <i class="fa-regular fa-lightbulb"></i>
+        </span>
+        <div class="alg-center">
+          <h5 class="title">Japan</h5>
+          <p class="desc">Explore Japan: Ancient Traditions, Modern Marvels</p>
+        </div>
       </article>
-      <article class="w-25">
-        <img src="" alt="">
-        <h5 class="title">Singapore</h5>
-        <p class="desc">Experience Singapore: A Lion City Adventure</p>
+      <article class="flex alg-start w-25">
+        <span class="iconHolder alg-center jty-center">
+          <i class="fa-regular fa-lightbulb"></i>
+        </span>
+        <div class="alg-center">
+          <h5 class="title">Singapore</h5>
+          <p class="desc">Experience Singapore: A Lion City Adventure</p>
+        </div>
       </article>
     </div>
-    <div class="flex alg-center jty-between w-100">
-      <article class="w-25">
-        <img src="" alt="">
-        <h5 class="title">Bandung</h5>
-        <p class="desc">Bandung Getaway: Cool Climate, Warm Hospitality</p>
+    <div class="flex alg-center jty-between w-100 mv-3">
+      <article class="flex alg-start w-25">
+        <span class="iconHolder alg-center jty-center">
+          <i class="fa-regular fa-star"></i>
+        </span>
+        <div class="alg-center">
+          <h5 class="title">Bandung</h5>
+          <p class="desc">Bandung Getaway: Cool Climate, Warm Hospitality</p>
+        </div>
       </article>
-      <article class="w-25">
-        <img src="" alt="">
-        <h5 class="title">Surabaya</h5>
-        <p class="desc">Surabaya Adventure: Historic Charm, Modern City</p>
+      <article class="flex alg-start w-25">
+        <span class="iconHolder alg-center jty-center">
+          <i class="fa-regular fa-star"></i>
+        </span>
+        <div class="alg-center">
+          <h5 class="title">Surabaya</h5>
+          <p class="desc">Surabaya Adventure: Historic Charm, Modern City</p>
+        </div>
       </article>
-      <article class="w-25">
-        <img src="" alt="">
-        <h5 class="title">Bangkok</h5>
-        <p class="desc">Bangkok Experience: A City of Contrasts</p>
+      <article class="flex alg-start w-25">
+        <span class="iconHolder alg-center jty-center">
+          <i class="fa-regular fa-star"></i>
+        </span>
+        <div class="alg-center">
+          <h5 class="title">Bangkok</h5>
+          <p class="desc">Bangkok Experience: A City of Contrasts</p>
+        </div>
       </article>
     </div>
   </section>
 
-  <section class="container column mv-5">
+  <section id="callus" class="container column mv-5">
     <h3 class="title mv-4">Your Closing Argument Headline</h3>
     <p class="w-50 tagline">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id fuga libero nostrum qui nihil
       sit illo eum delectus nobis eveniet! Ducimus obcaecati dolor vitae.</p>
-    <button></button>
+    <button type="submit" name="button" class="btn mv-5 p-3 w-25">explore more</button>
   </section>
 
-  <footer>
+  <footer class="column alg-center p-4">
+    <h5 class="italic mv-4">mockups</h5>
+    <div class="flex">
+      <h5 class="desc fs-7 mh-1">Terms of Service</h5>
+      <h5 class="desc fs-7">Privacy Policy</h5>
+    </div>
+    <div class="flex mv-2">
+      <h5 class="desc fs-7 mh-1">©2024</h5>
+      <h5 class="desc fs-7">Mockups</h5>
+    </div>
 
   </footer>
+
+  <script src="js/index.js"></script>
+
 </body>
 
 </html>
