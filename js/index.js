@@ -62,7 +62,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
 
   if (isValid) {
     alert("Form submitted successfully!");
-    event.target.submit();
+    e.target.submit();
   }
 });
 
